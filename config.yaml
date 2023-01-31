@@ -2,11 +2,11 @@
 #Flag types: (0 = nothing, 1 = event, 2 = new, 3 = hot)
 #Recommended to use only up to 15 worlds
 worlds:
-    #Properties for Scania 0
+  #Properties for Scania 0
   - flag: 0
-    server_message: Welcome to Scania!
-    event_message: Scania!
-    why_am_i_recommended: Welcome to Scania!
+    server_message: 欢迎来到起司的枫叶世界
+    event_message: 起司枫叶
+    why_am_i_recommended: 欢迎
     channels: 3
     exp_rate: 10
     meso_rate: 10
@@ -180,8 +180,8 @@ server:
     COUPON_INTERVAL: 3600000            #60 minutes, 3600000.
     UPDATE_INTERVAL: 777                #Dictates the frequency on which the "centralized server time" is updated.
 
-    ENABLE_PIC: true               #Pick true/false to enable or disable Pic. Delete character requires PIC available.
-    ENABLE_PIN: true               #Pick true/false to enable or disable Pin.
+    ENABLE_PIC: false               #Pick true/false to enable or disable Pic. Delete character requires PIC available.
+    ENABLE_PIN: false               #Pick true/false to enable or disable Pin.
 
     BYPASS_PIC_EXPIRATION: 20           #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
     BYPASS_PIN_EXPIRATION: 15           #Enables PIN bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
@@ -340,10 +340,10 @@ server:
     #Some Gameplay Enhancing Configurations
     #Scroll Configuration
     USE_PERFECT_GM_SCROLL: true     #Scrolls from GMs never uses up slots nor fails.
-    USE_PERFECT_SCROLLING: false     #Scrolls doesn't use slots upon failure.
-    USE_ENHANCED_CHSCROLL: false     #Equips even more powerful with chaos upgrade.
-    USE_ENHANCED_CRAFTING: false     #Apply chaos scroll on every equip crafted.
-    USE_ENHANCED_CLNSLATE: false     #Clean slates can be applied to recover successfully used slots as well.
+    USE_PERFECT_SCROLLING: true     #Scrolls doesn't use slots upon failure.
+    USE_ENHANCED_CHSCROLL: true     #Equips even more powerful with chaos upgrade.
+    USE_ENHANCED_CRAFTING: true     #Apply chaos scroll on every equip crafted.
+    USE_ENHANCED_CLNSLATE: true     #Clean slates can be applied to recover successfully used slots as well.
     SCROLL_CHANCE_ROLLS: 1         #Number of rolls for success on a scroll, set 1 for default.
     CHSCROLL_STAT_RATE: 1               #Number of rolls of stat upgrade on a successfully applied chaos scroll, set 1 for default.
     CHSCROLL_STAT_RANGE: 6              #Stat upgrade range (-N, N) on chaos scrolls.
@@ -362,12 +362,12 @@ server:
 
     #Character Configuration
     USE_ADD_SLOTS_BY_LEVEL: false    #Slots are added each 20 levels.
-    USE_ADD_RATES_BY_LEVEL: false    #Rates are added each 20 levels.
+    USE_ADD_RATES_BY_LEVEL: true    #Rates are added each 20 levels.
     USE_STACK_COUPON_RATES: false   #Multiple coupons effects builds up together.
-    USE_PERFECT_PITCH: false         #For lvl 30 or above, each lvlup grants player 1 perfect pitch.
+    USE_PERFECT_PITCH: true         #For lvl 30 or above, each lvlup grants player 1 perfect pitch.
 
     #Quest Configuration
-    USE_QUEST_RATE: false           #Exp/Meso gained by quests uses fixed server exp/meso rate times quest rate as multiplier, instead of player rates.
+    USE_QUEST_RATE: true           #Exp/Meso gained by quests uses fixed server exp/meso rate times quest rate as multiplier, instead of player rates.
 
     #Quest Points Configuration
     QUEST_POINT_REPEATABLE_INTERVAL: 25  #Minimum interval between repeatable quest completions for quest points to be awarded.
@@ -376,7 +376,7 @@ server:
     QUEST_POINT_PER_EVENT_CLEAR: 0       #Each completed event instance awards N quest points, set 0 to disable.
 
     #Guild Configuration
-    CREATE_GUILD_MIN_PARTNERS: 6         #Minimum number of members on Guild Headquarters to establish a new guild.
+    CREATE_GUILD_MIN_PARTNERS: 2         #Minimum number of members on Guild Headquarters to establish a new guild.
     CREATE_GUILD_COST: 1500000
     CHANGE_EMBLEM_COST: 5000000
     EXPAND_GUILD_BASE_COST: 500000
@@ -390,16 +390,16 @@ server:
     FAMILY_MAX_GENERATIONS: 1000         #Maximum depth of family tree. (Distance from leader to farthest junior)
 
     #Equipment Configuration
-    USE_EQUIPMNT_LVLUP_SLOTS: false  #Equips can upgrade slots at level up.
+    USE_EQUIPMNT_LVLUP_SLOTS: true  #Equips can upgrade slots at level up.
     USE_EQUIPMNT_LVLUP_POWER: false  #Enable more powerful stat upgrades at equip level up.
     USE_EQUIPMNT_LVLUP_CASH: false   #Enable equip leveling up on cash equipments as well.
-    USE_SPIKES_AVOID_BANISH: false   #Shoes equipped with spikes prevents mobs from banishing wearer.
+    USE_SPIKES_AVOID_BANISH: true   #Shoes equipped with spikes prevents mobs from banishing wearer.
     MAX_EQUIPMNT_LVLUP_STAT_UP: 10000   #Max stat upgrade an equipment can have on a levelup.
     MAX_EQUIPMNT_STAT: 32767            #Max stat on an equipment by leveling up.
     USE_EQUIPMNT_LVLUP: 1               #All equips lvlup at max level of N, set 1 to disable.
 
     #Map-Chair Configuration
-    USE_CHAIR_EXTRAHEAL: false       #Enable map chairs to further recover player's HP and MP (player must have the Chair Mastery skill).
+    USE_CHAIR_EXTRAHEAL: true       #Enable map chairs to further recover player's HP and MP (player must have the Chair Mastery skill).
     CHAIR_EXTRA_HEAL_MULTIPLIER: 10    #Due to only being able to be send up-to-255 heal values, values being actually updated is the one displayed times this.
     CHAIR_EXTRA_HEAL_MAX_DELAY: 21      #Players are expected to recover fully after using this skill for N seconds.
 

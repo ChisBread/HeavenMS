@@ -35,7 +35,7 @@ public class GameConstants {
     // Ronan's rates upgrade system
     private static final int[] DROP_RATE_GAIN = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
     private static final int[] MESO_RATE_GAIN = {1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105};
-    private static final int[]  EXP_RATE_GAIN = {1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};    //fibonacci :3
+    private static final int[] EXP_RATE_GAIN = {1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};    //fibonacci :3
     
     private static final int[] jobUpgradeBlob = {1, 20, 60, 110, 190};
     private static final int[] jobUpgradeSpUp = {0, 1, 2, 3, 6};
@@ -198,6 +198,7 @@ public class GameConstants {
         add("Bgm13/Minar'sDream");
         add("Bgm13/AcientForest");
         add("Bgm13/TowerOfGoddess");
+        add("Bgm13/FightSand");
         add("Bgm14/DragonLoad");
         add("Bgm14/HonTale");
         add("Bgm14/CaveOfHontale");
@@ -209,6 +210,10 @@ public class GameConstants {
         add("Bgm15/WhiteHerb");
         add("Bgm15/Pirate");
         add("Bgm15/SunsetDesert");
+        add("Bgm15/ElinForest");
+        add("Bgm15/inNautilus");
+        add("Bgm15/PoisonForest");
+        add("Bgm15/Nautilus");
         add("Bgm16/Duskofgod");
         add("Bgm16/FightingPinkBeen");
         add("Bgm16/Forgetfulness");
@@ -232,6 +237,8 @@ public class GameConstants {
         add("Bgm20/GhostShip");
         add("Bgm20/NetsPiramid");
         add("Bgm20/UnderSubway");
+        add("Bgm20/NetsPiramid2");
+        add("Bgm20/UnderSubway2");
         add("Bgm21/2021year");
         add("Bgm21/2099year");
         add("Bgm21/2215year");
@@ -248,6 +255,7 @@ public class GameConstants {
         add("BgmEvent/wichTower");
         add("BgmGL/amoria");
         add("BgmGL/Amorianchallenge");
+        add("BgmGL/Bigfoot");
         add("BgmGL/chapel");
         add("BgmGL/cathedral");
         add("BgmGL/Courtyard");
@@ -274,8 +282,12 @@ public class GameConstants {
         add("BgmSG/CBD_field");
         add("BgmSG/CBD_town");
         add("BgmSG/Ghostship");
+        add("BgmUI/NxLogo");
+        add("BgmUI/NxLogoMS");
         add("BgmUI/ShopBgm");
         add("BgmUI/Title");
+        add("BgmUI/WCSelect");
+        add("BgmUI/WzLogo");
     }};
     
     // MapleStory default keyset

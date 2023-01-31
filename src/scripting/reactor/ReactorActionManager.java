@@ -156,7 +156,7 @@ public class ReactorActionManager extends AbstractPlayerInteraction {
     }
     
     public void dropItems(boolean delayed, int posX, int posY, boolean meso, int mesoChance, final int minMeso, final int maxMeso, int minItems) {
-        MapleCharacter chr = c.getPlayer();
+        final MapleCharacter chr = c.getPlayer();
         if(chr == null) return;
         
         List<ReactorDropEntry> items = assembleReactorDropEntries(chr, generateDropList(getDropChances(), chr.getDropRate(), meso, mesoChance, minItems));
