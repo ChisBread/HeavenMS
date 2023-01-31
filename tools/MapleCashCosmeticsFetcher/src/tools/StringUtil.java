@@ -51,8 +51,9 @@ public class StringUtil {
 	 */
 	public static String getRightPaddedStr(String in, char padchar, int length) {
 		StringBuilder builder = new StringBuilder(in);
-		for (int x = in.length(); x < length; x++) {
-			builder.append(padchar);
+		byte[] bytes = in.getBytes(Charset.forName("GBK"));
+		for (int x = bytes.length; x < length; x++) {
+			builder.append(append);
 		}
 		return builder.toString();
 	}

@@ -52,9 +52,9 @@ public class StringUtil {
 	 */
 	public static String getRightPaddedStr(String in, char padchar, int length) {
 		StringBuilder builder = new StringBuilder(in);
-		 // Edited for Chinese compatibility
-		for (int x = in.getBytes().length; x < length; x++) {
-			builder.append(padchar);
+		byte[] bytes = in.getBytes(Charset.forName("GBK"));
+		for (int x = bytes.length; x < length; x++) {
+			builder.append(append);
 		}
 		return builder.toString();
 	}

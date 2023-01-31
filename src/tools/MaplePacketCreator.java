@@ -7688,11 +7688,12 @@ public class MaplePacketCreator {
         }
 
         private static String getRightPaddedStr(String in, char padchar, int length) {
-                StringBuilder builder = new StringBuilder(in);
-                for (int x = in.length(); x < length; x++) {
-                        builder.append(padchar);
-                }
-                return builder.toString();
+		StringBuilder builder = new StringBuilder(in);
+		byte[] bytes = in.getBytes(Charset.forName("GBK"));
+		for (int x = bytes.length; x < length; x++) {
+			builder.append(append);
+		}
+		return builder.toString();
         }
 
         public static byte[] MobDamageMobFriendly(MapleMonster mob, int damage, int remainingHp) {
