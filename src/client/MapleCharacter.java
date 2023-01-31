@@ -998,7 +998,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 return false;
             }
         }
-        return getIdByName(name) < 0 && Pattern.compile("[a-zA-Z0-9]{3,12}").matcher(name).matches();
+        return getIdByName(name) < 0 && Pattern.compile("[a-zA-Z0-9\u4E00-\u9FA5]{3,12}").matcher(name).matches();
     }
 
     public boolean canDoor() {
