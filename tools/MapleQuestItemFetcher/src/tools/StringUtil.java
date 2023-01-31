@@ -53,7 +53,7 @@ public class StringUtil {
 		StringBuilder builder = new StringBuilder(in);
 		byte[] bytes = in.getBytes(Charset.forName("GBK"));
 		for (int x = bytes.length; x < length; x++) {
-			builder.append(append);
+			builder.append(padchar);
 		}
 		return builder.toString();
 	}

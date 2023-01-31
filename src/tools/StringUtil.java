@@ -20,6 +20,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 package tools;
+import java.nio.charset.Charset;
 
 public class StringUtil {
 	/**
@@ -54,7 +55,7 @@ public class StringUtil {
 		StringBuilder builder = new StringBuilder(in);
 		byte[] bytes = in.getBytes(Charset.forName("GBK"));
 		for (int x = bytes.length; x < length; x++) {
-			builder.append(append);
+			builder.append(padchar);
 		}
 		return builder.toString();
 	}

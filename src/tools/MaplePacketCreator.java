@@ -34,6 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.nio.charset.Charset;
 
 import client.BuddylistEntry;
 import client.MapleBuffStat;
@@ -7691,7 +7692,7 @@ public class MaplePacketCreator {
 		StringBuilder builder = new StringBuilder(in);
 		byte[] bytes = in.getBytes(Charset.forName("GBK"));
 		for (int x = bytes.length; x < length; x++) {
-			builder.append(append);
+			builder.append(padchar);
 		}
 		return builder.toString();
         }
