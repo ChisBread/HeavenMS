@@ -30,34 +30,27 @@ importPackage(Packages.server.life);
 importPackage(Packages.tools);
 
 function init() {
-  scheduleNew();
+    scheduleNew();
 }
 
 function scheduleNew() {
-  setupTask = em.schedule("start", 0); //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
+    setupTask = em.schedule("start", 0);    //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
 }
 
 function cancelSchedule() {
-  if (setupTask != null) setupTask.cancel(true);
+    if (setupTask != null)
+        setupTask.cancel(true);
 }
 
 function start() {
-  var dangeroudCroko1 = em.getChannelServer().getMapFactory().getMap(107000300);
-  if (dangeroudCroko1.getMonsterById(6220000) != null) {
-    setupTask = em.schedule("start", 5 * 60 * 1000);
-    return;
-  }
-  dangeroudCroko1.spawnMonsterOnGroundBelow(
-    MapleLifeFactory.getMonster(6220000),
-    new Packages.java.awt.Point(90, 119)
-  );
-  dangeroudCroko1.broadcastMessage(
-    MaplePacketCreator.serverNotice(
-      6,
-      "The huge crocodile Dyle has come out from the swamp."
-    )
-  );
-  setupTask = em.schedule("start", 5 * 60 * 1000);
+    var dangeroudCroko1 = em.getChannelServer().getMapFactory().getMap(107000300);
+	if(dangeroudCroko1.getMonsterById(6220000) != null) {
+		setupTask = em.schedule("start", 3 * 60 * 60 * 1000);
+		return;
+	}
+    dangeroudCroko1.spawnMonsterOnGroundBelow(MapleLifeFactory.getMonster(6220000), new Packages.java.awt.Point(90, 119));
+    dangeroudCroko1.broadcastMessage(MaplePacketCreator.serverNotice(6, "The huge crocodile Dyle has come out from the swamp."));
+	setupTask = em.schedule("start", 3 * 60 * 60 * 1000);
 }
 
 // ---------- FILLER FUNCTIONS ----------
@@ -66,9 +59,7 @@ function dispose() {}
 
 function setup(eim, leaderid) {}
 
-function monsterValue(eim, mobid) {
-  return 0;
-}
+function monsterValue(eim, mobid) {return 0;}
 
 function disbandParty(eim, player) {}
 
@@ -93,3 +84,4 @@ function clearPQ(eim) {}
 function allMonstersDead(eim) {}
 
 function playerUnregistered(eim, player) {}
+

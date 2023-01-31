@@ -5,11 +5,11 @@ function start() {
 
 function action(mode, type, selection) {
     if (mode == -1) {
-	cm.sendNext("祝你旅途愉快.");
+	cm.sendNext("祝你旅途愉快。");
         cm.dispose();
     } else {
         if (status == 0 && mode == 0) {
-		cm.sendNext("祝你旅途愉快.");
+		cm.sendNext("祝你旅途愉快。");
 		cm.dispose();
         }
         if (mode == 1)
@@ -17,7 +17,7 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) 
-			cm.sendYesNo("您是否想跳过这些教程，直接前往明珠港?");
+			cm.sendYesNo("你想跳过教程直接去明珠港吗？");
 	else if (status == 1) {
                 cm.warp(104000000, 0);
                 cm.dispose();

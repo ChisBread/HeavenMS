@@ -33,7 +33,7 @@ var status = 0;
 var cost = 10000;
 
 function start() {
-    cm.sendNext("嗨，您好！ 此出租车仅适用于VIP客户。 我们不仅会像普通出租车一样带您前往其他城镇，我们还提供了值得VIP级别的更好服务。 它有点贵，但是...仅需10,000个messos，我们将带您安全前往\ r \ n＃b蚂蚁隧道＃k。");
+    cm.sendNext("你好！这辆计程车只供贵宾使用。我们提供更优质的服务，而不是像普通出租车那样带你去不同的城镇。有点贵，但是。。。只要10000金币，我们会把你安全带到\r\n#b蚂蚁广场#k.");
 }
 
 function action(mode, type, selection) {
@@ -42,16 +42,16 @@ function action(mode, type, selection) {
         cm.dispose();
         return;
     } else if (mode == 0) {
-        cm.sendOk("这个镇也有很多景点。 当您有需要去蚂蚁隧道公园时，找到我们。");
+        cm.sendOk("如果你之后需要去蚂蚁广场，那么再找我们。");
     	cm.dispose();
     	return;
     }
     if (status == 1) {
-        cm.sendYesNo(cm.getJobId() == 0 ? "我们为初学者提供90％的特别折扣。 蚂蚁隧道位于地牢的深处，地牢位于维多利亚岛的中心，那里是24小时流动商店所在的地方。 您想以＃b1,000 mesos＃k的价格去那儿吗？“：”常规费用适用于所有非初学者。 蚂蚁隧道位于地牢内部的深处，地牢位于维多利亚岛的中心，那里是24小时流动商店所在的地方。 您想花＃b10,000 mesos＃k去那里吗？");
+        cm.sendYesNo(cm.getJobId() == 0 ? "我们对新手有九折优惠。蚂蚁广场位于金银岛中心的深处，那里有24小时商店。你想花#b1000金币#k去那里吗？" : "普通费用适用于所有非新手。 蚂蚁广场位于金银岛中心的深处，那里有24小时商店。你想花#b10000金币#k去那里吗？");
         cost /= ((cm.getJobId() == 0) ? 10 : 1);
     } else if (status == 2) {
         if (cm.getMeso() < cost)
-            cm.sendNext("您似乎没有足够的金币。 抱歉，没有它您将无法使用。")
+            cm.sendNext("看起来你没有足够的金币。对不起，我不能为你服务。")
         else {
             cm.gainMeso(-cost);
             cm.warp(105070001);
