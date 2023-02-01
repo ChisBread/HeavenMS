@@ -2,7 +2,7 @@ version: '3'
 services:
   maplestory:
     network_mode: "host"
-    image: chisbread/heavenms:test
+    image: chisbread/heavenms:latest
     depends_on:
       - msdb
     environment:
